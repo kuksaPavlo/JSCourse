@@ -1,64 +1,101 @@
-// let message
-// message = "Hello";
-// console.log(message);
+//alert('Hello world');
+//    console.log(2022, 1.2);
+//    console.log(20 * 'asdsasd');
+//    console.log(1 / 0);
+//    console.log('hhdhdh', "jjdjdjd", `jjdjdjd`);
+//    console.log(true,false);
+//    console.log(null);
+//    console.log(undefined);
+//    console.log(Symbol());
+//    console.log({ name: 'Denis', age: 30,  });
+//    console.table({ name: 'Denis', age: 30,  });
 
-// let message = "Hello2";
-// console.log(message);
+//    console.log([1,2,3,4]);
+// // // // // // // // // 
+//var, let, const
+// var name = 'Denis';
+// console.log(name);
+// name = 'Den';
+// console.log(name);
 
-// let message = "Hello3", messageTwo = "Hello4";
-// console.log(message, messageTwo);
+// var age;
+// console.log(age);
+// age = 40;
+// console.log(age);
 
-// let message5 = "";
-// let message6 = "";
-// console.log(message5);
-// console.log(message6;
+// var $name = 'Ivan';
+// var _name = 'Ivan';
+// // var 1sdf = '';
+// var userAge = 30;
+// var user_age = 30;
 
-// let user = "ttt",
-//   age = 25,
-//   message = "tets";
+// console.log(car);
+// var car = 'bnm';
+// var car = 'ddd';
+// console.log(car);
 
-// let user = "ttt"
-//   , age = 25
-//   , message = "test";
+// //let
+// console.clear();
 
-// let message = "hello";
-// message = "World";
-// alert(message);
+// //console.log(nickName);
+// let nickName = 'dmgame';
+// nickName = 'dmgamess';
+// console.log(nickName);
 
-// let hello = "Hello world";
-// let message;
-// message = hello;//coppy the variable
-// alert(hello);
-// alert(message);
+// //const
+// // const fname = 'rrrr';
+// // fname = 'dddd';
+// // console.log(fname);
 
-//* ***don't like these**** */
-// num = 5;
-// alert(num);
-//
-// "use strict";
-// num = 6;
-// alert(num);
+// const user = {
+//   nam: 'Denis',
+//   ag: 3
+// };
+// user.ag = 22;
+// console.log(user);
+// //////////////////
 
-//** const */
-// const myBirthday = "03.19.1993";
-// myBirthday = "01.01.2001"
-// alert(myBirthday);// TypeError: Assignment to constant variable.
+// let value;
 
-// const COLOR_RED = "#F00";
-// const COLOR_GREEN = "#0F0";
-// const COLOR_BLUE = "#00F";
-// const COLOR_ORANGE = "#FF7F00";
+// //Number to string
+// value = String(10);//string
+// value = String(10+3);//string
+// value = (40).toString();//string
 
-// let color = COLOR_ORANGE;
-// alert(color);
+// //Boolean to String
+// value = String(true);//string
 
-//** Home work */
-let admin;
-let name;
-name = "John";
-admin = name;
-alert(admin);
+// //Array to string
+// value = String([1,2,3,4]);//string
+// //Object to string
+// value = String({nam: 'Denis'});//string [object Object]
 
+// value = 30 + '' + 30;//string 3030
+// value = 30 - 'cvfd';//number NaN
+// value = 30 * '2';//number 60
 
-const EARTH;
-let carentUser;
+// value = true + 10;//number 11
+// value = false * 2;//number 0
+// value = true + undefined;//number NaN
+
+// //string to number
+// value = Number('23');//number 23
+// value = Number(true);//number 1
+// value = Number(null);//number 0
+// value = Number('false');//number NaN
+// value = Number([1,23,4]);//number NaN
+
+// value = parseInt('200sdfg');//number 200
+// value = parseInt('aaaa200sdfg');//number NaN
+// value = parseFloat('200.212px');//number 200.212
+
+// //Boolean
+// value = Boolean('Hello');//boolean true
+// value = Boolean('');//boolean false
+// value = Boolean(100);//boolean true
+// value = Boolean(-222);//boolean true
+// value = Boolean(0);//boolean false
+// value = Boolean(undefined);//boolean false
+// value = Boolean({});//boolean true
+// value = Boolean([]);//boolean true
+// value = Boolean(null);//boolean false
