@@ -1,61 +1,3 @@
-//alert('Hello world');
-//    console.log(2022, 1.2);
-//    console.log(20 * 'asdsasd');
-//    console.log(1 / 0);
-//    console.log('hhdhdh', "jjdjdjd", `jjdjdjd`);
-//    console.log(true,false);
-//    console.log(null);
-//    console.log(undefined);
-//    console.log(Symbol());
-//    console.log({ name: 'Denis', age: 30,  });
-//    console.table({ name: 'Denis', age: 30,  });
-
-//    console.log([1,2,3,4]);
-// // // // // // // // // 
-//var, let, const
-// var name = 'Denis';
-// console.log(name);
-// name = 'Den';
-// console.log(name);
-
-// var age;
-// console.log(age);
-// age = 40;
-// console.log(age);
-
-// var $name = 'Ivan';
-// var _name = 'Ivan';
-// // var 1sdf = '';
-// var userAge = 30;
-// var user_age = 30;
-
-// console.log(car);
-// var car = 'bnm';
-// var car = 'ddd';
-// console.log(car);
-
-// //let
-// console.clear();
-
-// //console.log(nickName);
-// let nickName = 'dmgame';
-// nickName = 'dmgamess';
-// console.log(nickName);
-
-// //const
-// // const fname = 'rrrr';
-// // fname = 'dddd';
-// // console.log(fname);
-
-// const user = {
-//   nam: 'Denis',
-//   ag: 3
-// };
-// user.ag = 22;
-// console.log(user);
-// //////////////////
-
-// let value;
 
 // //Number to string
 // value = String(10);//string
@@ -99,3 +41,34 @@
 // value = Boolean({});//boolean true
 // value = Boolean([]);//boolean true
 // value = Boolean(null);//boolean false
+
+Boolean('')           // false
+Boolean(0)            // false     
+Boolean(-0)           // false
+Boolean(NaN)          // false
+Boolean(null)         // false
+Boolean(undefined)    // false
+Boolean(false)        // false
+
+Boolean({})             // true
+Boolean([])             // true
+Boolean(Symbol())       // true
+!!Symbol()              // true
+Boolean(function() {})  // true
+
+Number(null)                   // 0
+Number(undefined)              // NaN
+Number(true)                   // 1
+Number(false)                  // 0
+Number(" 12 ")                 // 12
+Number("-12.34")               // -12.34
+Number("\n")                   // 0
+Number(" 12s ")                // NaN
+Number(123)                    // 123
+
+String(123)                   // '123'
+String(-12.3)                 // '-12.3'
+String(null)                  // 'null'
+String(undefined)             // 'undefined'
+String(true)                  // 'true'
+String(false)                 // 'false'
