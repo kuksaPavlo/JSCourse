@@ -1,101 +1,102 @@
-//alert('Hello world');
-//    console.log(2022, 1.2);
-//    console.log(20 * 'asdsasd');
-//    console.log(1 / 0);
-//    console.log('hhdhdh', "jjdjdjd", `jjdjdjd`);
-//    console.log(true,false);
-//    console.log(null);
-//    console.log(undefined);
-//    console.log(Symbol());
-//    console.log({ name: 'Denis', age: 30,  });
-//    console.table({ name: 'Denis', age: 30,  });
+//numbers
+const num1 = 10;
+const num2 = 20;
+let value;
 
-//    console.log([1,2,3,4]);
-// // // // // // // // // 
-//var, let, const
-// var name = 'Denis';
-// console.log(name);
-// name = 'Den';
-// console.log(name);
+// + * / - %
+value = num1 + num2;
+value = value + 100;
+value += 100;
+value = 5 % 2;
+value++;
+value--;
+++value;
+--value;
 
-// var age;
-// console.log(age);
-// age = 40;
-// console.log(age);
+value = 0.6 + 0.7;//=1.2999999999999998
+value = value.toFixed(2);//выводт 2 числа после точки и делает нормальный ответ 1.3. Но результат в виде строки
+value = +value.toFixed(2);//+ делает значение числовым
+value = parseFloat(value.toFixed(1));//явно приводит к флоату
+value = ( 0.6 * 10 + 0.7 * 10) / 10;//=1.3
 
-// var $name = 'Ivan';
-// var _name = 'Ivan';
-// // var 1sdf = '';
-// var userAge = 30;
-// var user_age = 30;
+// Math object
+value = Math.PI;
+value = Math.random();
+value = Math.round(2.4);
+value = Math.ceil(2.1);
+value = Math.floor(2.9);
+value = Math.min(2, 4, 1, 0);
+value = Math.max(2, 4, 1, 0);
 
-// console.log(car);
-// var car = 'bnm';
-// var car = 'ddd';
-// console.log(car);
+value = Math.floor(Math.random() * 10 + 1);
+const arr = ['black', 'yelow', 'pink', 'green', 'blue'];
+value = Math.floor(Math.random() * arr.length);
 
-// //let
-// console.clear();
+console.log(value, arr[value]);
 
-// //console.log(nickName);
-// let nickName = 'dmgame';
-// nickName = 'dmgamess';
-// console.log(nickName);
+//Home work
 
-// //const
-// // const fname = 'rrrr';
-// // fname = 'dddd';
-// // console.log(fname);
+let billion = 1000000000;
+let billion1 = 1e9;//1 with 9 0
 
-// const user = {
-//   nam: 'Denis',
-//   ag: 3
-// };
-// user.ag = 22;
-// console.log(user);
-// //////////////////
+alert(7.3e9);
 
-// let value;
+// 1e3 = 1 * 1000
+// 1.23e6 = 1.23 * 1000000
 
-// //Number to string
-// value = String(10);//string
-// value = String(10+3);//string
-// value = (40).toString();//string
+let ms = 0.000001;
+let ms1 = 1e-6;// 0.000001
+1 делится на 1 с 3 нулями
+1e-3 = 1 / 1000 (=0.001)
 
-// //Boolean to String
-// value = String(true);//string
+1.23 делится на 1 с 6 нулями
+1.23e-6 = 1.23 / 1000000 (=0.00000123)
 
-// //Array to string
-// value = String([1,2,3,4]);//string
-// //Object to string
-// value = String({nam: 'Denis'});//string [object Object]
+//HEX
 
-// value = 30 + '' + 30;//string 3030
-// value = 30 - 'cvfd';//number NaN
-// value = 30 * '2';//number 60
+alert( 0xff );//255
+alert( 0xFF );//255
 
-// value = true + 10;//number 11
-// value = false * 2;//number 0
-// value = true + undefined;//number NaN
+//bin and 8
+let a = 0b11111111;// бинарная форма записи числа 255
+let b = 0o377;// восьмеричная форма записи числа 255
 
-// //string to number
-// value = Number('23');//number 23
-// value = Number(true);//number 1
-// value = Number(null);//number 0
-// value = Number('false');//number NaN
-// value = Number([1,23,4]);//number NaN
+alert( a==b );//true
 
-// value = parseInt('200sdfg');//number 200
-// value = parseInt('aaaa200sdfg');//number NaN
-// value = parseFloat('200.212px');//number 200.212
+//toString(base) from 2 to 36, default 10
+let num = 255;
+alert(num.toString(16));//ff
+alert(num.toString(2));//11111111
+alert(1234567891234567..toString(36));//c5m8nquc5j == 1234567891234567
+alert((1234567891234567).toString(36));//c5m8nquc5j == 1234567891234567
 
-// //Boolean
-// value = Boolean('Hello');//boolean true
-// value = Boolean('');//boolean false
-// value = Boolean(100);//boolean true
-// value = Boolean(-222);//boolean true
-// value = Boolean(0);//boolean false
-// value = Boolean(undefined);//boolean false
-// value = Boolean({});//boolean true
-// value = Boolean([]);//boolean true
-// value = Boolean(null);//boolean false
+//rounding
+Math.floor// округление в меншую сторону
+Math.ceil// округление в большую сторону
+Math.round// округление до ближайшего цулого
+Math.trunc// удаление дробной части
+
+// Неточные вычисления Inaccurate calculations
+//**Внутри JavaScript число представлено в виде 64-битного формата IEEE-754. Для хранения числа используется 64 бита: 52 из них используется для хранения цифр, 11 из них для хранения положения десятичной точки (если число целое, то хранится 0), и один бит отведён на хранение знака.Если число слишком большое, оно переполнит 64-битное хранилище, JavaScript вернёт бесконечность: */
+
+ alert(0.1.toFixed(20)); // 0.10000000000000000555
+
+//Home work
+const MATH_PI = Math.PI;
+alert(+MATH_PI.toFixed(2));
+
+value = Math.max(15, 11, 16, 12, 51, 12, 13, 51);
+value2 = Math.min(15, 11, 16, 12, 51, 12, 13, 51);
+console.log(value, value2);
+
+let valueRandom = Math.random();
+alert(valueRandom.toFixed(2));
+
+let valueRandom2 = (Math.random() * 100 + 1);
+alert(valueRandom2.toFixed());
+
+let value = 0.6 + 0.7;
+alert(+value.toFixed(2));
+
+let value = '100$';
+console.log(parseInt(value));
